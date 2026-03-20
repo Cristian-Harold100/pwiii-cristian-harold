@@ -1,168 +1,198 @@
 # pwiii-cristian-harold
 Aula de Programação Web III com o Professor João Siles
 
-# 🚀 Projeto Laravel
+# 🚀 Projeto Laravel - Guia Completo (Didático)
 
-Aplicação desenvolvida com o framework Laravel.
+Aplicação desenvolvida com o framework Laravel para a disciplina de **Programação Web III**.
 
 ---
 
-## 📋 Requisitos
+# 📋 Pré-requisitos
 
-Antes de iniciar, instale em sua máquina:
+Antes de começar, você precisa ter instalado no seu computador:
 
-* PHP (>= 8.x)
+* PHP (versão 8 ou superior)
 * Composer
 * Node.js e NPM
 
 ---
 
-## ⚙️ Instalação do Laravel (caso ainda não tenha)
+# ⚙️ Instalando o Laravel
 
-Instale o instalador global do Laravel via Composer:
+Se você **já tem PHP e Composer instalados**, execute no terminal:
 
-```bash
+```
 composer global require laravel/installer
 ```
 
-Após a instalação, reinicie o terminal.
+Depois disso, **reinicie o terminal**.
 
 ---
 
-## 🆕 Criando um Novo Projeto
+## ❗ Caso NÃO tenha PHP e Composer
 
-Crie um novo projeto Laravel:
+Abra o PowerShell como administrador e execute:
 
-```bash
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.4'))
+```
+
+Depois, feche e abra o terminal novamente.
+
+---
+
+# 🆕 Criando um novo projeto
+
+No terminal (dentro da pasta onde deseja criar o projeto):
+
+```
 laravel new nome-do-projeto
 ```
 
-Durante a instalação, selecione:
+Durante a instalação, escolha:
 
-* Starter kit: **React**
-* Authentication: **Laravel (padrão)**
-* Testing: **PHPUnit**
-* Laravel Boost: **Yes (padrão)**
-* NPM build: **Yes (padrão)**
+* React (frontend)
+* Laravel (autenticação padrão)
+* PHPUnit (testes)
+* Laravel Boost → Enter (padrão)
+* NPM build → Enter (padrão)
 
-Acesse a pasta do projeto:
+Depois:
 
-```bash
+```
 cd nome-do-projeto
 ```
 
 ---
 
-## 🔑 Configuração Inicial
+# 🔑 Configuração inicial
 
-Copie o arquivo de ambiente:
+## 1. Arquivo .env
 
-```bash
+Copie o arquivo de exemplo:
+
+```
 cp .env.example .env
 ```
 
-Gere a chave da aplicação:
+## 2. Gerar chave da aplicação
 
-```bash
+```
 php artisan key:generate
 ```
 
 ---
 
-## 🗄️ Banco de Dados
+# 🗄️ Banco de dados
 
-Configure o banco de dados no arquivo `.env` e execute:
+O Laravel usa **migrations**, que são arquivos para criar tabelas no banco.
 
-```bash
+Antes de rodar, configure o banco no arquivo `.env`.
+
+Depois execute:
+
+```
 php artisan migrate
 ```
 
 ---
 
-## 🎨 Front-End
+# 🎨 Front-end
 
 Instale as dependências:
 
-```bash
+```
 npm install
 ```
 
-Compile os arquivos:
+Compile o projeto:
 
-```bash
+```
 npm run build
 ```
 
-Para desenvolvimento:
+Durante o desenvolvimento:
 
-```bash
+```
 npm run dev
 ```
 
 ---
 
-## ▶️ Executando o Projeto
+# ▶️ Rodando o projeto
 
-Inicie o servidor local:
+Para iniciar o servidor:
 
-```bash
+```
 php artisan serve
 ```
 
-A aplicação estará disponível em:
+Acesse no navegador:
 
+```
 http://localhost:8000
+```
 
 ---
 
-## 🔄 Instalar Projeto já existente (clonado)
+# 🔄 Clonar projeto existente (GitHub)
 
-Caso tenha baixado o projeto do GitHub:
+Se você baixou o projeto, execute:
 
-```bash
+```
 composer install
-```
-
-```bash
 cp .env.example .env
-```
-
-```bash
 php artisan key:generate
-```
-
-```bash
 php artisan migrate
-```
-
-```bash
 npm install
-```
-
-```bash
 npm run build
 ```
 
 ---
 
-## 🧰 Comandos Úteis
+# 🧰 Comandos úteis
 
-Criar uma view:
+Criar uma nova view:
 
-```bash
+```
 php artisan make:view nome
 ```
 
-Criar migration:
+Criar uma migration:
 
-```bash
+```
 php artisan make:migration nome_da_tabela
 ```
 
 ---
 
-## 📚 Documentação
+# 📚 Dicas importantes
+
+* Sempre que alterar o front-end → rode `npm run build`
+* Nunca apague o arquivo `.env.example`
+* Se algo não funcionar, tente:
+
+  * reiniciar o terminal
+  * rodar `composer install` novamente
+
+---
+
+# 📖 Documentação oficial
 
 https://laravel.com/docs
 
 ---
+
+# ✅ Resumo rápido
+
+1. Instalar dependências
+2. Criar projeto (`laravel new`)
+3. Configurar `.env`
+4. Rodar migrations
+5. Rodar `npm install`
+6. Rodar `php artisan serve`
+
+---
+
+💡 Pronto! Seu projeto Laravel já estará funcionando 🚀
+
