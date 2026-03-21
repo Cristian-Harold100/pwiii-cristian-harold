@@ -1,4 +1,27 @@
 # pwiii-cristian-harold
+
+entra na pasta e já digite composer install 
+
+
+.env
+
+.env example
+
+
+
+
+npm install; npm run build 
+
+php artisan key:generate 
+
+php artisan migrate
+
+composer run dev 
+
+
+
+comandos 
+php
 Aula de Programação Web III com o Professor João Siles
 
 # 🚀 Projeto Laravel - Guia Completo (Didático)
