@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+conteúdo do GitHub
+=======
+conteúdo do Laravel
+>>>>>>> main
+
+
 # pwiii-cristian-harold
 
 entra na pasta e já digite composer install 
